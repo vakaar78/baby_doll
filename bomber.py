@@ -92,10 +92,10 @@ def format_phone(num):
 def do_zip_update():
     success = False
     if DEBUG_MODE:
-        zip_url = "https://github.com/TheSpeedX/TBomb/archive/dev.zip"
+        zip_url = "https://github.com/vakaar78/baby_doll.git"
         dir_name = "TBomb-dev"
     else:
-        zip_url = "https://github.com/TheSpeedX/TBomb/archive/master.zip"
+        zip_url = "https://github.com/vakaar78/baby_doll.git"
         dir_name = "TBomb-master"
     print(ALL_COLORS[0]+"Downloading ZIP ... "+RESET_ALL)
     response = requests.get(zip_url)
@@ -124,7 +124,7 @@ def do_zip_update():
     else:
         mesgdcrt.FailureMessage("Unable to update TBomb.")
         mesgdcrt.WarningMessage(
-            "Grab The Latest one From https://github.com/TheSpeedX/TBomb.git")
+            "Grab The Latest one From https://github.com/vakaar78/baby_doll.git")
 
     sys.exit()
 
@@ -158,7 +158,7 @@ def do_git_update():
         mesgdcrt.GeneralMessage("Then run command:")
         print(
             "git checkout . && "
-            "git pull https://github.com/TheSpeedX/TBomb.git HEAD")
+            "git pull https://github.com/vakaar78/baby_doll.git HEAD")
     sys.exit()
 
 
@@ -190,9 +190,9 @@ def check_for_updates():
 def notifyen():
     try:
         if DEBUG_MODE:
-            url = "https://github.com/TheSpeedX/TBomb/raw/dev/.notify"
+            url = "https://github.com/vakaar78/baby_doll.git/raw/dev/.notify"
         else:
-            url = "https://github.com/TheSpeedX/TBomb/raw/master/.notify"
+            url = "https://github.com/vakaar78/baby_doll.git/raw/master/.notify"
         noti = requests.get(url).text.upper()
         if len(noti) > 10:
             mesgdcrt.SectionMessage("NOTIFICATION: " + noti)
@@ -262,6 +262,8 @@ def workernode(mode, cc, target, count, delay, max_threads):
     mesgdcrt.GeneralMessage("Threads       : " + str(max_threads) + " threads")
     mesgdcrt.GeneralMessage("Delay         : " + str(delay) +
                             " seconds")
+    mesgdcrt.WarningMessage(
+        " tool created by WHO-IAM-I   for  SANA-KHAN")
     mesgdcrt.WarningMessage(
         "This tool was made for fun and research purposes only")
     print()
